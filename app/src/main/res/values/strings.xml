@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Gitorade</string>
+    <string name="failed_to_navigate">Failed to navigate</string>
+    <string name="username">Username</string>
+    <string name="git_in">Git In</string>
+    <string name="password">Password</string>
+    <string name="enter_proper_password">Enter proper password</string>
+    <string name="enter_proper_username">Enter proper username</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="failed_to_auth">Failed to authenticate</string>
 </resources>

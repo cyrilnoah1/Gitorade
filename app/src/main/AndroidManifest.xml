@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gitorade">
+        <activity android:name=".features.home.ui.HomeActivity"></activity>
+        <activity android:name=".features.access.ui.AccessActivity" />
         <activity android:name=".features.splash.ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

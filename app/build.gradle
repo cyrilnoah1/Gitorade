@@ -30,6 +30,10 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -65,8 +69,8 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui-ktx:$arch_navigation_version"
     //
     // Room O.R.M. dependencies.
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
     implementation "android.arch.paging:runtime:$paging_version"
     //
     // Retrofit dependencies.

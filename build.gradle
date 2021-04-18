@@ -17,7 +17,7 @@ buildscript {
     ext.rxjava_retrofit_adapter_version = '1.0.0'
     ext.rxandroid_version = '2.1.1'
     ext.glide_version = '4.9.0'
-    ext.room_version = '1.1.1'
+    ext.room_version = '2.2.6'
     ext.paging_version = '1.0.1'
     ext.okhttp_version = '3.12.1'
 

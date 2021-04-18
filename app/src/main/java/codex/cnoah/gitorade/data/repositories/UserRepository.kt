@@ -1,12 +1,12 @@
-package codex.cnoah.gitorade.data.local.dataSources
+package codex.cnoah.gitorade.data.repositories
 
 import codex.cnoah.gitorade.data.models.User
 
-interface UserDataSource {
+interface UserRepository {
 
     suspend fun saveUser(username: String, password: String)
 
-    suspend fun getUser(username: String, password: String): User?
+    suspend fun getUser(username: String, password: String) : User?
 
     suspend fun getUsers(): List<User>
 }
