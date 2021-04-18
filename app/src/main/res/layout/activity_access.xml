@@ -7,6 +7,16 @@
     android:padding="@dimen/dp20"
     tools:context=".features.access.ui.AccessActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/g_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_github" />
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_username"
         android:layout_width="@dimen/dp0"
