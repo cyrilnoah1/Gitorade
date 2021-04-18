@@ -1,6 +1,7 @@
 package codex.cnoah.gitorade.data.remote
 
 import codex.cnoah.gitorade.data.QUERY_PARAMETER_KEY
+import codex.cnoah.gitorade.data.models.RemoteRepository
 import codex.cnoah.gitorade.data.models.Repository
 import com.google.gson.annotations.SerializedName
 import io.reactivex.Observable
@@ -20,7 +21,7 @@ interface GithubService {
 data class RepositoriesResponseBody(
     @SerializedName(TOTAL_COUNT) val totalCount: Int,
     @SerializedName(INCOMPLETE_RESULTS) val incompleteResults: Boolean,
-    @SerializedName(ITEMS) val repositories: List<Repository>
+    @SerializedName(ITEMS) val repositories: List<RemoteRepository>
 ) {
 
     companion object {

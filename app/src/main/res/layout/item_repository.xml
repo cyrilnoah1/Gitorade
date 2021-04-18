@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp5"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!--OWNER PROFILE IMAGE-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOwnerImage"
+        android:layout_width="@dimen/image_item_height"
+        android:layout_height="@dimen/image_item_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/image_load_placeholder" />
+
+    <!--NAME HEADING-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameHeading"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/tvFullNameHeading"
+        app:layout_constraintStart_toEndOf="@+id/ivOwnerImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--NAME CONTENT-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameContent"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvNameHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNameHeading"
+        tools:text="thegitusers" />
+
+    <!--FULL NAME HEADING-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullNameHeading"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:text="@string/full_name"
+        app:layout_constraintBottom_toTopOf="@+id/tvWatcherCountHeading"
+        app:layout_constraintStart_toEndOf="@+id/ivOwnerImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameHeading" />
+
+    <!--FULL NAME CONTENT-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullNameContent"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginLeft="@dimen/dp5"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFullNameHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/tvFullNameHeading"
+        app:layout_constraintTop_toTopOf="@+id/tvFullNameHeading"
+        tools:text="thegitusers/cyrilnoah" />
+
+
+    <!--WATCHER COUNT HEADING-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWatcherCountHeading"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:text="@string/watch_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivOwnerImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullNameHeading" />
+
+    <!--WATCHER COUNT CONTENT-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWatcherCountContent"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginLeft="@dimen/dp5"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWatcherCountHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvWatcherCountHeading"
+        app:layout_constraintTop_toTopOf="@+id/tvWatcherCountHeading"
+        tools:text="12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

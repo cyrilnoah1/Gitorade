@@ -9,4 +9,9 @@
     <string name="welcome">Welcome!</string>
     <string name="welcome_back">Welcome back!</string>
     <string name="failed_to_auth">Failed to authenticate</string>
+    <string name="search_repositories">Search Repositories</string>
+    <string name="name">Name: </string>
+    <string name="full_name">Full Name:</string>
+    <string name="watch_count">Watch Count:</string>
+    <string name="please_search_a_repository">Please search a repository</string>
 </resources>

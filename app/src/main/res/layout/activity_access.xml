@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/size_20"
+    android:padding="@dimen/dp20"
     tools:context=".features.access.ui.AccessActivity">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_username"
-        android:layout_width="@dimen/size_0"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:digits="1234567890_QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
         android:hint="@string/username"
@@ -25,7 +25,7 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_password"
-        android:layout_width="@dimen/size_0"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:imeOptions="actionDone"
@@ -40,7 +40,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_git_in"
-        android:layout_width="@dimen/size_0"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:text="@string/git_in"
         android:textColor="@color/white"

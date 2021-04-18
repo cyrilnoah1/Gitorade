@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="codex.cnoah.gitorade">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".GitoradeApp"
         android:allowBackup="true"
@@ -10,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gitorade">
-        <activity android:name=".features.home.ui.HomeActivity"></activity>
+        <activity android:name=".features.home.ui.HomeActivity" />
         <activity android:name=".features.access.ui.AccessActivity" />
         <activity android:name=".features.splash.ui.activities.SplashActivity">
             <intent-filter>
