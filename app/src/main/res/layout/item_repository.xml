@@ -27,6 +27,7 @@
         android:layout_marginStart="@dimen/dp10"
         android:layout_marginLeft="@dimen/dp10"
         android:text="@string/name"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvFullNameHeading"
         app:layout_constraintStart_toEndOf="@+id/ivOwnerImage"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +37,8 @@
         android:id="@+id/tvNameContent"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginLeft="@dimen/dp5"
         android:ellipsize="end"
         android:singleLine="true"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvNameHeading"
@@ -52,6 +55,7 @@
         android:layout_marginStart="@dimen/dp10"
         android:layout_marginLeft="@dimen/dp10"
         android:text="@string/full_name"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvWatcherCountHeading"
         app:layout_constraintStart_toEndOf="@+id/ivOwnerImage"
         app:layout_constraintTop_toBottomOf="@+id/tvNameHeading" />
@@ -94,6 +98,7 @@
         android:layout_marginLeft="@dimen/dp5"
         android:ellipsize="end"
         android:singleLine="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvWatcherCountHeading"
         app:layout_constraintEnd_toStartOf="@+id/iv_favorite"
         app:layout_constraintHorizontal_bias="0.0"

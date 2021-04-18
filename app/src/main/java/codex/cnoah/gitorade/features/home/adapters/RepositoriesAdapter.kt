@@ -39,7 +39,9 @@ class RepositoriesAdapter(
                 tvFullNameContent.text = repo.fullName
                 tvWatcherCountContent.text = repo.watchersCount.toString()
                 ivOwnerImage.setUrlSource(repo.ownerImage)
-                clRoot.setOnClickListener { onClick(repo) }
+                clRoot.setOnClickListener { onClick(repo.apply {
+                    isFavorite = !isFavorite
+                }) }
 
                 if (repo.isFavorite) {
                     ivFavorite.setImageDrawable(

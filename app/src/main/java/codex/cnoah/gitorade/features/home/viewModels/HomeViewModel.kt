@@ -22,14 +22,16 @@ class HomeViewModel : BaseViewModel() {
     fun searchResults(searchTerm: String) {
         _searchTerm.postValue(searchTerm)
         ioScope.launch {
-            if (withContext(coroutineContext) {
-                    githubRepo.fetchRepositories(
-                        searchTerm
-                    )
-                }) {
+            withContext(ioScope.coroutineContext) {
+                githubRepo.fetchRepositories(
+                    searchTerm
+                )
+            }?.let { repos ->
+                _repos.postValue(repos)
+                return@let
+            } ?: run {
                 _repos.postValue(githubRepo.getRepositories(searchTerm))
-            }else{
-                _repos.postValue(githubRepo.getRepositories(searchTerm))
+                return@run
             }
         }
     }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import codex.cnoah.gitorade.R
 import codex.cnoah.gitorade.common.BaseActivity
@@ -20,7 +21,7 @@ class HomeActivity : BaseActivity<HomeViewModel, ActivityHomeBinding>(
 ) {
 
     private val repositoriesAdapter by lazy {
-        RepositoriesAdapter(::navigateToDetails, ::toggleFavorite)
+        RepositoriesAdapter(::toggleFavorite, ::toggleFavorite)
     }
 
     override fun ActivityHomeBinding.setupViews() {
@@ -40,6 +41,7 @@ class HomeActivity : BaseActivity<HomeViewModel, ActivityHomeBinding>(
         }
 
         fun setupSearch() {
+            etSearchRepo.requestFocus()
             etSearchRepo.setOnEditorActionListener { v, actionId, event ->
 
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
@@ -69,7 +71,9 @@ class HomeActivity : BaseActivity<HomeViewModel, ActivityHomeBinding>(
 
     override fun ActivityHomeBinding.observeViewModel() {
         viewModel.apply {
-            repos.observe(this@HomeActivity){ repoList ->
+            repos.observe(this@HomeActivity) { repoList ->
+                tvNoResults.isVisible = repoList.isNullOrEmpty()
+
                 repositoriesAdapter.submitList(repoList)
                 repositoriesAdapter.notifyDataSetChanged()
             }
