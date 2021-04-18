@@ -1,5 +1,6 @@
 package codex.cnoah.gitorade.data.local.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -17,7 +18,7 @@ interface GitHubDao {
     fun saveRepos(repos: List<Repository>)
 
     @Query("SELECT * FROM repository WHERE id = :id")
-    fun getRepo(id: Int): Repository
+    fun getRepo(id: Int): Repository?
 
     @Query("SELECT * FROM repository WHERE name LIKE :searchKey ORDER BY watchers_count DESC")
     fun getRepos(searchKey: String): List<Repository>

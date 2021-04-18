@@ -1,5 +1,6 @@
 package codex.cnoah.gitorade.data.local.dataSources
 
+import androidx.lifecycle.LiveData
 import codex.cnoah.gitorade.data.local.CacheProvider
 import codex.cnoah.gitorade.data.models.Repository
 
@@ -13,6 +14,14 @@ class CacheDataSource : LocalGitDataSource {
 
     override fun getRepositories(searchKey: String): List<Repository> {
         return cache.getRepos(searchKey)
+    }
+
+    override fun saveRepository(repo: Repository) {
+        cache.saveRepo(repo)
+    }
+
+    override fun getRepository(id: Int): Repository? {
+        return cache.getRepo(id)
     }
 
 }

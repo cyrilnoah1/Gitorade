@@ -2,15 +2,18 @@ package codex.cnoah.gitorade.features.home.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import codex.cnoah.gitorade.R
 import codex.cnoah.gitorade.common.setUrlSource
 import codex.cnoah.gitorade.data.models.Repository
 import codex.cnoah.gitorade.databinding.ItemRepositoryBinding
 
 class RepositoriesAdapter(
-    private val onClick: (data: Repository) -> Unit
+    private val onClick: (data: Repository) -> Unit,
+    private val onFavClick: (data: Repository) -> Unit
 ) : ListAdapter<Repository, RepositoriesAdapter.RepoViewHolder>(DIFF) {
 
     override fun onCreateViewHolder(viewHolder: ViewGroup, viewType: Int): RepoViewHolder {
@@ -37,6 +40,28 @@ class RepositoriesAdapter(
                 tvWatcherCountContent.text = repo.watchersCount.toString()
                 ivOwnerImage.setUrlSource(repo.ownerImage)
                 clRoot.setOnClickListener { onClick(repo) }
+
+                if (repo.isFavorite) {
+                    ivFavorite.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            item.root.context,
+                            R.drawable.ic_favorite
+                        )
+                    )
+                } else {
+                    ivFavorite.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            item.root.context,
+                            R.drawable.ic_unfavorite
+                        )
+                    )
+                }
+
+                ivFavorite.setOnClickListener {
+                    onFavClick(repo.apply {
+                        isFavorite = !isFavorite
+                    })
+                }
             }
         }
     }

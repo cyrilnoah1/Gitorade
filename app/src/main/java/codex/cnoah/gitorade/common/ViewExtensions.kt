@@ -1,12 +1,15 @@
 package codex.cnoah.gitorade.common
 
 import android.os.Build
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import codex.cnoah.gitorade.R
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 import java.text.ParseException
 
 fun AppCompatImageView.setUrlSource(url: String?) {
@@ -45,4 +48,12 @@ fun AppCompatTextView.setTextDate(date: String) {
     } catch (e: ParseException) {
         date
     }
+}
+
+/**
+ * Function to display a [Snackbar] with a desired [message]
+ * for a desired [duration] in a [ViewGroup].
+ */
+fun View.snack(message: String, duration: Int = Snackbar.LENGTH_SHORT): Snackbar {
+    return Snackbar.make(this, message, duration)
 }

@@ -14,4 +14,5 @@
     <string name="full_name">Full Name:</string>
     <string name="watch_count">Watch Count:</string>
     <string name="please_search_a_repository">Please search a repository</string>
+    <string name="no_inter_msg">You\'re offline</string>
 </resources>

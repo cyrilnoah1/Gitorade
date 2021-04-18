@@ -20,7 +20,7 @@ data class Repository(
     @ColumnInfo(name = HTML_URL) val htmlUrl: String,
     @ColumnInfo(name = COMMITS_URL) val commitsUrl: String,
     @ColumnInfo(name = CONTRIBUTORS_URL) val contributorsUrl: String,
-    @ColumnInfo(name = FAVORITE) val isFavorite: Boolean = false
+    @ColumnInfo(name = FAVORITE) var isFavorite: Boolean = false
 ) {
 
     companion object {

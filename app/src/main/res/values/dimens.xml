@@ -11,4 +11,6 @@
     <dimen name="dp40">40dp</dimen>
     <dimen name="image_item_width">100dp</dimen>
     <dimen name="image_item_height">100dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp60">60dp</dimen>
 </resources>
